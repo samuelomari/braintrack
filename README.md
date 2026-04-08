@@ -19,7 +19,7 @@ This project addresses common challenges students face, such as procrastination,
 - Intelligently recommends the most urgent task
 - Reduces decision fatigue
 
-### ⏳ Focus Timer (Pomodoro Technique)
+###  Focus Timer (Pomodoro Technique)
 - 25-minute study sessions with 5-minute breaks
 - Start, pause, and reset functionality
 - Session counter
