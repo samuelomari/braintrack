@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 BrainTrack - Smart Study Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🧠 BrainTrack</h1>
+        <p>Smart Study Assistant</p>
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+        <section id="task-planner">
+            <h2>📅 Smart Task Planner</h2>
+            <form id="task-form">
+                <input type="text" id="task-subject" placeholder="Subject" required>
+                <input type="text" id="task-description" placeholder="Task Description" required>
+                <input type="datetime-local" id="task-deadline" required>
+                <button type="submit">Add Task</button>
+            </form>
+            <div id="task-list"></div>
+        </section>
+
+        <section id="smart-suggestion">
+            <h2>🧠 Smart Suggestion</h2>
+            <button id="suggest-task">What Should I Study Now?</button>
+            <div id="suggestion-display"></div>
+        </section>
+
+        <section id="focus-timer">
+            <h2>⏳ Focus Timer (Pomodoro)</h2>
+            <div id="timer-display">25:00</div>
+            <button id="start-timer">Start Study Session</button>
+            <button id="pause-timer" disabled>Pause</button>
+            <button id="reset-timer">Reset</button>
+            <p>Session: <span id="session-count">0</span> completed</p>
+        </section>
+
+        <section id="progress-dashboard">
+            <h2>📊 Progress Dashboard</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>Tasks Completed</h3>
+                    <p id="completed-tasks">0</p>
+                </div>
+                <div class="stat">
+                    <h3>Total Study Time</h3>
+                    <p id="total-study-time">0 minutes</p>
+                </div>
+                <div class="stat">
+                    <h3>Progress Level</h3>
+                    <p id="progress-level">Beginner</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

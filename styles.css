@@ -1,0 +1,263 @@
+/* BrainTrack Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.dark-mode section {
+    background: #444;
+    color: #f4f4f4;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+body.dark-mode h2 {
+    color: #9bb1ff;
+}
+
+/* Task Form */
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#task-form input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+body.dark-mode #task-form input {
+    background: #555;
+    color: #f4f4f4;
+    border-color: #666;
+}
+
+#task-form button {
+    padding: 0.5rem 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#task-form button:hover {
+    background: #5a6fd8;
+}
+
+/* Task List */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .task-item {
+    border-color: #666;
+}
+
+.task-item.completed {
+    background: #e8f5e8;
+    text-decoration: line-through;
+}
+
+body.dark-mode .task-item.completed {
+    background: #2d4a2d;
+}
+
+.task-info h3 {
+    margin-bottom: 0.25rem;
+}
+
+.urgency {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+.urgency.overdue {
+    background: #f44336;
+}
+
+.urgency.urgent {
+    background: #ff9800;
+}
+
+.urgency.soon {
+    background: #2196f3;
+}
+
+.urgency.future {
+    background: #4caf50;
+}
+
+.task-info p {
+    color: #666;
+}
+
+.task-actions button {
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: white;
+}
+
+/* Smart Suggestion */
+#suggestion-display {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f8ff;
+    border-radius: 4px;
+    min-height: 50px;
+}
+
+body.dark-mode #suggestion-display {
+    background: #2d4a5a;
+}
+
+/* Focus Timer */
+#timer-display {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+#focus-timer button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#focus-timer button:hover:not(:disabled) {
+    background: #5a6fd8;
+}
+
+#focus-timer button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Progress Dashboard */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem;
+}
+
+.stat h3 {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.stat p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+body.dark-mode .stat h3 {
+    color: #ccc;
+}
+
+body.dark-mode .stat p {
+    color: #9bb1ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #task-form {
+        flex-direction: column;
+    }
+    
+    .stats {
+        flex-direction: column;
+    }
+}
